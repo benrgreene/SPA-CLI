@@ -16,5 +16,23 @@ module.exports = {
       toReturn.main = 'help'
     }
     return toReturn
+  },
+  hasProperties: (args, properties) => {
+    let toReturn = true
+    properties.forEach((property) => {
+      if (!args.hasOwnProperty(property)) {
+        toReturn = false
+      }
+    })
+    return toReturn
+  },
+  missingProperties: (args, properties) => {
+    let toReturn = []
+    properties.forEach((property) => {
+      if (!args.hasOwnProperty(property)) {
+        toReturn.push(`Missing argument: --${property}`)
+      }
+    })
+    return toReturn
   }
 }
