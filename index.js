@@ -5,9 +5,11 @@ const inquirer = require("inquirer")
 const chalk    = require("chalk")
 const shell    = require("shelljs")
 
-/** Custom Modules for the tools */
-const argsLib    = require("./ArgProccessing.js")
-const messageLib = require("./MessageHandler.js")
+/** Custom modules for the tools */
+const argsLib      = require("./ArgProccessing.js")
+const messageLib   = require("./MessageHandler.js")
+const pluginLib    = require("./CreatePlugin.js")
+const endpointLib  = require("./CreateEndpoint.js")
 
 // Get CLI args
 const args = argsLib.getArgObject()
@@ -16,23 +18,26 @@ const args = argsLib.getArgObject()
 const run = async () => {
   switch (args.main) {
     case 'plugin':
-      handleCommand(['name'])
+      handleCommand(['name'], pluginLib.createPlugin)
       break
     case 'endpoint':
-      handleCommand(['file', 'endpoint', 'callback'])
+      handleCommand(['file', 'endpoint', 'callback'], endpointLib.createEndpoint)
       break
     default:
       console.log('helping')
   }
 }
 
-const handleCommand = (commandArgs) => {
+// Handles a CLI command:
+// Parameters:
+//    commandArgs - the required arguments for the command
+//    callback    - the function to call after argument validation
+const handleCommand = (commandArgs, callback) => {
   let haveProperties = argsLib.hasProperties(args, commandArgs)
   if (haveProperties) {
-
+    callback(args)
   } else {
     let messages = argsLib.missingProperties(args, commandArgs)
-    console.log(messages)
     messageLib.printError(messages)
   }
 }
