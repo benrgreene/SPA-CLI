@@ -2,9 +2,12 @@ const shell    = require("shelljs")
 
 module.exports = {
   pluginExists: (pluginName) => {
-    let pluginsExists      = shell.test('-d', 'plugins')
     let pluginFolderExists = shell.test('-d', `plugins/${pluginName}`)
-    return (pluginsExists && pluginFolderExists)
+    return pluginFolderExists
+  },
+  folderExists: (folderName) => {
+    let folderExists = shell.test('-d', folderName)
+    return folderExists
   },
   createFile: (fileName, fileContent) => {
     shell.touch(fileName)

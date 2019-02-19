@@ -13,4 +13,5 @@ Requires the following parameters:
 * file: the file name for the API endpoint. **Required**
 * endpoint: the endpoint name (everything after `/api/`). **Required**
 * callback: the name of the function to use as the endpoint callback. **Required**
-* add-hook: whether to add a 'load-api' hook to the setup file. **Optional**, defaults to false.
+* plugin: the plugin to add the endpoint to. **Required**
+* pluginDirectory: the directory in the plugin the endpoint goes in. **Optional**, defaults to 'api/'
