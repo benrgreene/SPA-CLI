@@ -1,6 +1,7 @@
 // Library helpers
 const shell       = require("shelljs")
 const fileHelpers = require("./FileHelpers.js")
+
 // default content for any new plugins
 const defaultFileContent = "<?php\n\n"
 

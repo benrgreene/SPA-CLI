@@ -6,10 +6,10 @@ const chalk    = require("chalk")
 const shell    = require("shelljs")
 
 /** Custom modules for the tools */
-const argsLib      = require("./ArgProccessing.js")
-const messageLib   = require("./MessageHandler.js")
-const pluginLib    = require("./CreatePlugin.js")
-const endpointLib  = require("./CreateEndpoint.js")
+const argsLib      = require("./modules/ArgProccessing.js")
+const messageLib   = require("./modules/MessageHandler.js")
+const pluginLib    = require("./modules/CreatePlugin.js")
+const endpointLib  = require("./modules/CreateEndpoint.js")
 
 // Get CLI args
 const args = argsLib.getArgObject()
