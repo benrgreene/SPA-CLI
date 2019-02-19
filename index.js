@@ -28,7 +28,10 @@ const run = async () => {
       handleCommand(['dir'], installLib.downloadFramework)
       break
     default:
-      console.log('helping')
+      console.log(`You must enter one of the following commands:
+* spaf plugin --name=<plugin-name>
+* spaf endpoint --file=<file-name> --endpoint=<endpoint-url> --callback=<callback-function-name>
+* spaf install --dir=<site-folder>`)
   }
 }
 
