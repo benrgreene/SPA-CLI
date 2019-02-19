@@ -10,6 +10,7 @@ const argsLib      = require("./modules/ArgProccessing.js")
 const messageLib   = require("./modules/MessageHandler.js")
 const pluginLib    = require("./modules/CreatePlugin.js")
 const endpointLib  = require("./modules/CreateEndpoint.js")
+const installLib   = require("./modules/InstallFramework.js")
 
 // Get CLI args
 const args = argsLib.getArgObject()
@@ -22,6 +23,9 @@ const run = async () => {
       break
     case 'endpoint':
       handleCommand(['file', 'endpoint', 'callback'], endpointLib.createEndpoint)
+      break
+    case 'install':
+      handleCommand(['dir'], installLib.downloadFramework)
       break
     default:
       console.log('helping')

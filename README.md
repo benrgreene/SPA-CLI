@@ -12,15 +12,13 @@ There are a few commands withing the CLI tool:
 
 ### Create New Framework Instance
 
-**COMMAND UNDER CONSTRUCTION**
-
-Command: `spa-cli install --site-name=<my-site>`
+Command: `spa-cli install --dir=<my-site>`
 
 It's possible to download the framework to a a new folder to create a new site instance. 
 
 Requires the following parameters:
 
-* --site-name: this is the folder/site to create and save the framework files in. Is relative to the directory the command is run in.
+* --dit: this is the folder/site to create and save the framework files in. Is relative to the directory the command is run in.
 
 ### Adding Plugins
 
