@@ -10,8 +10,16 @@ module.exports = {
     return folderExists
   },
   createFile: (fileName, fileContent) => {
-    shell.touch(fileName)
-    let shellString = shell.ShellString(fileContent)
-    shellString.to(fileName)
+    let created         = shell.touch(fileName)
+    let shellString     = shell.ShellString(fileContent)
+    let contentsWritten = shellString.to(fileName)
+
+    if (created && contentsWritten) {
+      return true
+    } else if (created) {
+      return 'File created, contents not copied'
+    } else {
+      return 'Endpoint not created'
+    }
   }
 }
