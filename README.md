@@ -18,7 +18,7 @@ It's possible to download the framework to a a new folder to create a new site i
 
 Requires the following parameters:
 
-* --dit: this is the folder/site to create and save the framework files in. Is relative to the directory the command is run in.
+* --dir: this is the folder/site to create and save the framework files in. Is relative to the directory the command is run in.
 
 ### Adding Plugins
 
