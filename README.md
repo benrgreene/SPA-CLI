@@ -4,7 +4,7 @@ This is a CLI tool for helping with development withing the SPA Framework.
 
 ## Installing
 
-First, you'll need Node/NPM installed. After that, install the tool using `npm install spa-cli`.
+**THIS ISN'T ON NPM YET**. Check back for updates.
 
 ## Commands
 
