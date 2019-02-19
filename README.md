@@ -4,7 +4,7 @@ This is a CLI tool for helping with development withing the SPA Framework.
 
 ## Installing
 
-**THIS ISN'T ON NPM YET**. Check back for updates.
+First, you'll need to make sure Node/NPM is installed. Nest, install the CLI using the command: `npm install spaf -g`
 
 ## Commands
 
@@ -12,7 +12,7 @@ There are a few commands withing the CLI tool:
 
 ### Create New Framework Instance
 
-Command: `spa-cli install --dir=<my-site>`
+Command: `spaf install --dir=<my-site>`
 
 It's possible to download the framework to a a new folder to create a new site instance. 
 
@@ -22,7 +22,7 @@ Requires the following parameters:
 
 ### Adding Plugins
 
-Command: `spa-cli plugin --name=<plugin>`
+Command: `spaf plugin --name=<plugin>`
 
 Requires the following parameters:
 
@@ -30,7 +30,7 @@ Requires the following parameters:
 
 ### Adding API Endpoints
 
-Command: `spa-cli endpoint --plugin=<plugin-name> --file=<api-endpoint-file-name> --endpoint=<my-endpoint> --callback=<callback-function> --pluginDirectory=<my-plugin-directory>`
+Command: `spaf endpoint --plugin=<plugin-name> --file=<api-endpoint-file-name> --endpoint=<my-endpoint> --callback=<callback-function> --pluginDirectory=<my-plugin-directory>`
 
 Parameters:
 

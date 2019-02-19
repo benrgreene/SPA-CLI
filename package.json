@@ -1,6 +1,6 @@
 {
-  "name": "spa-cli",
-  "version": "1.0.0",
+  "name": "spaf",
+  "version": "1.0.1",
   "description": "CLI tool for the SPA framework",
   "main": "./src/index.js",
   "scripts": {
